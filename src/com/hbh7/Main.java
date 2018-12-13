@@ -275,21 +275,23 @@ public class Main {
         System.out.println("  |       A       |       B       |       C       |       D       |       E       |       F       |       G       |       H       |");
         System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
 
-        for (int i = 0; i < 8; i++) {
+        for (int i = 8; i >= 1; i--) {
             System.out.println("  |                                                                                                                               |");
-            System.out.print((i+1) + " | ");
+            System.out.print((i) + " | ");
             for (int k = 0; k < 8; k++) {
-                if (boardArray[i][k] == null) {
+                if (boardArray[i-1][k] == null) {
                     System.out.print("             " + " | ");
                 } else {
-                    System.out.print(boardArray[i][k].displayPiece() + " | ");
+                    System.out.print(boardArray[i-1][k].displayPiece() + " | ");
                 }
             }
             System.out.println();
             System.out.println("  |                                                                                                                               |");
             System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
         }
-
+        System.out.println("  |       A       |       B       |       C       |       D       |       E       |       F       |       G       |       H       |");
+      
+        
     }
 }
 
